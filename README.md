@@ -139,7 +139,7 @@ Here are samples you can use for testing.
 
 ### Agent-friendly system prompt
 
-Suggested system prompt / agent instructions for clients integrating with the Intuit MCP server:
+Here is an example of a system prompt / agent instructions for clients integrating with the Intuit MCP server:
 
 ```
 # QuickBooks MCP Server
@@ -172,36 +172,6 @@ estimates, items, vendors, bills) for the currently authorized company.
 - All monetary amounts are in the company's home currency unless a `CurrencyRef` is present.
 - Dates are ISO 8601 (`YYYY-MM-DD`). Convert relative dates ("last month") before calling tools.
 ```
-
-### Example tool description (agent-friendly)
-
-The description field sent to the LLM via `tools/list` should be concise and decision-oriented. Example:
-
-```json
-{
-  "name": "get_invoice",
-  "description": "Retrieve full details of a single QuickBooks invoice when you already know its ID. Use this after list_invoices or get_unpaid_invoices has returned an invoice the user wants to inspect, or when the user references a specific invoice number you have previously resolved to an ID. Do NOT use this to search — use list_invoices for that. Returns all invoice fields including line items, customer, amounts, due date, and email status.",
-  "inputSchema": {
-    "type": "object",
-    "properties": {
-      "invoice_id": {
-        "type": "string",
-        "description": "QuickBooks internal invoice ID (the 'Id' field, e.g. '130'). This is NOT the invoice number the customer sees (DocNumber). If the user gave you a DocNumber like 'INV-1037', call list_invoices first to resolve it to an Id."
-      }
-    },
-    "required": ["invoice_id"]
-  }
-}
-```
-
-Example error message (written for the model, not the developer):
-
-```
-Error: No invoice found with Id "130" in this company.
-The user may have given you a DocNumber instead of an Id, or the invoice may belong to a different company.
-Suggested next step: call list_invoices with a doc_number filter to find the right Id.
-```
-
 ---
 
 ## Partner feedback
