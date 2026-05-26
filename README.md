@@ -6,7 +6,8 @@ Connect AI agents and LLM-powered apps to QuickBooks Online through the Model Co
 >
 > **Audience:** AI pilot partners under the Intuit App Partner Program.
 >
-> **Note:** This is a pilot program and is provided "as is" for testing purposes. Intuit reserves the right to change functionality or charge for any MCP server functionality in the future, although no charge is associated with participation in the pilot program.
+
+ **NOTE: This is a pilot program and is provided "as is" for testing purposes. Intuit reserves the right to change functionality or charge for any MCP server functionality in the future, although no charge is associated with participation in the pilot program.**
 
 ---
 
