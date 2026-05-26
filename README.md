@@ -2,7 +2,7 @@
 
 Connect AI agents and LLM-powered apps to QuickBooks Online through the Model Context Protocol (MCP).
 
-> **Status: PILOT**
+> **Status: PILOT - Limited Availability**
 >
 > **Audience:** AI pilot partners under the Intuit App Partner Program.
 >
